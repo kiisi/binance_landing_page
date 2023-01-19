@@ -1,0 +1,412 @@
+@import url(https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,600;0,700;0,800;1,100&display=swap);
+@import url(https://fonts.googleapis.com/css?family=Roboto:100,100italic,300,300italic,regular,italic,500,500italic,700,700italic,900,900italic);
+
+*{
+    margin:0;
+    padding:0;
+    box-sizing: border-box;
+}
+
+html{
+    font-size: 62.5%;
+    font-family:'Poppins' ,sans-serif;
+}
+
+/* Font families */
+
+:root{
+    --primary-font:'Poppins', sans-serif;
+    --secondary-font:'Roboto', sans-serif;
+}
+
+/* Element colors */
+
+:root{
+    --yellow-dark:rgb(201, 148, 0);
+    --yellow-strong:rgb(240, 185, 11);
+}
+
+/* Hover colors */
+
+:root{
+    --yellow-light-hover:#F0b90b;
+    --yellow-dark-hover:rgb(201,148,0);
+}
+
+/* Max wrappers utility class */
+
+.max-wrapper{
+    max-width:1600px;
+    margin:0 auto;
+}
+
+/* Mobile Banner */
+
+.mobile-banner{
+    background:rgba(18, 22, 28, 0.9);
+    padding:1.4rem 1.6rem;
+    display:flex;
+    justify-content: space-between;
+    display:none;
+}
+.mobile-banner__main{
+    display:flex;
+    color:#fff;
+}
+.mobile-banner__main--title{
+    margin-left:1rem;
+}
+.mobile-banner__main--title h2{
+    font-weight:600;
+    letter-spacing: .9px;
+}
+.mobile-banner__main--title p{
+    font-size:1.35rem;
+}
+.mobile-banner__sub{
+    display:flex;
+    align-items: center;
+    column-gap: 1rem;
+}
+.mobile-banner__sub--download{
+    background: var(--yellow-strong);
+    border-radius: 30rem;
+    width:3.6rem;
+    height:3.6rem;
+    padding:8px;
+}
+.mobile-banner__sub--cancel{
+    height:2rem;
+    width:2rem;
+}
+.mobile-banner__sub--cancel svg{
+    fill: #fff;
+    color:#fff;   
+}
+
+@media screen and (max-width:1024px){
+    .mobile-banner{
+        display:flex;
+    }
+}
+
+
+/* Banner */
+
+.banner{
+    padding: 1.6rem;
+    font-size: 1.5rem;
+    background:rgb(43, 49, 57);
+    color:#fff;
+    display:grid;
+    place-items:center;
+    font-weight:500;
+}
+.banner__content{
+    display:flex;
+    column-gap:2rem;
+    align-items: center;
+}
+.banner__content--btn{
+    display:flex;
+    align-items:center;
+}
+.banner__content--btn__continue{
+    padding: 5px 1.6rem;
+    background:rgb(71, 77, 87);
+    font-size:1.2rem;
+    border-radius: 4px;
+    margin-right:1rem;
+}
+.banner__content--btn__cancel{
+    height:2rem;
+    width:2rem;
+}
+.banner__content--btn__cancel svg{
+    fill: rgb(118, 128, 143);
+    color:rgb(118, 128, 143);
+}
+.banner__content--main__country{
+    color:var(--yellow-dark);
+}
+
+/* Header */
+
+.header{
+    padding:0 2rem;
+    display:flex;
+    align-items: center;
+    cursor:pointer;
+    position:relative;
+}
+/* @media screen and (max-width:1080px){
+    .header{
+        padding:2rem 2rem;
+    }
+} */
+.header__logo{
+    margin-right: 2rem;
+    padding-top: 2.5rem;
+    padding-bottom: 2rem;
+}
+.header__logo svg{
+    fill: var(--yellow-strong);
+    color: var(--yellow-strong);
+    width:120px;
+    height:24px;
+}
+.header__main{
+    display:flex;
+}
+@media screen and (max-width:1080px){
+    .header__main{
+        display:none;
+    }
+}
+.header__main--item{
+    padding: 2rem 0;
+    display:flex;
+    align-items: center;
+    transition: 100ms ease;
+    font-family: var(--secondary-font);
+    font-size:1.5rem;
+    white-space:nowrap;
+}
+.header__main--item:not(:last-child){
+    margin-right: 1.2rem;
+}
+.header__main--item:hover > span{
+    color:var(--yellow-dark-hover);
+}
+.header__main--item:hover .header__main--item__apps{
+    color:var(--yellow-light-hover);
+}
+.header__main--item:hover .header__main--item__dropdown{
+    transform: rotate(-180deg);
+}
+.header__main--item__dropdown{
+    color:#707A8A;
+    transition: 250ms ease;
+}
+.header__sub{
+    display:flex;
+    align-items: center;
+    font-size:1.5rem;
+    margin-left: auto;
+}
+.header__sub--auth{
+    display:flex;
+    align-items: center;
+}
+.header__sub--auth__btn{
+    display:flex;
+    align-items: center;
+    padding:8px 12px;
+    background:rgb(252,213,53);
+    color:rgb(24,26,32);
+    border-radius: 4px;
+    font-size:1.4rem;
+    margin-right: 2rem;
+}
+.header__sub--auth__btn svg{
+    height:1.8rem;
+    width:1.8rem;
+    margin-right: 5px;
+}
+.header__sub--auth__btn--login{
+    background: #fff;
+}
+.header__sub--auth__btn--login:hover{
+    color:var(--yellow-light-hover);
+}
+@media screen and (max-width:1160px){
+    .header__sub--auth__btn--login{
+        display:none;
+    }
+}
+.header__sub--settings{
+    display:flex;
+    align-items: center;
+}
+.header__sub--settings__download{
+    margin-right:1.5rem;
+    margin-left:5px;
+}
+.header__sub--settings__language{
+    margin-right: 5px;
+    font-size: 21px;
+}
+.header__sub--settings__currency{
+    font-size: 1.4rem;
+}
+.header__sub--settings__divider{
+    width:1px;
+    margin: 0 5px;
+    background:#aaa;
+    height:12px;
+}
+.header__sub--settings__theme{
+    font-size: 1.8rem;
+}
+@media screen and (max-width:1300px){
+    .header__sub--settings__download,
+    .header__sub--settings__language, 
+    .header__sub--settings__currency,
+    .header__sub--settings__divider,
+    .header__sub--settings__theme{
+        display:none;
+    }
+}
+.header__sub--menu{
+    display:none;
+    place-items: center;
+}
+@media screen and (max-width:1300px){
+    .header__sub--menu{
+        display:grid;
+    }
+}
+
+/* ------ Header mega menu apps ------- */
+
+.header__mega-menu{
+    position: absolute;
+    top:100%;
+    box-shadow: 0px 0px 20px rgb(0 0 0 / 8%);
+    background:#fff;
+    padding:1.5rem;
+    border-bottom-left-radius: 1rem;
+    border-bottom-right-radius: 1rem;
+    display:flex;
+    display:none;
+}
+.header__mega-menu--item{
+    height:7.5rem;
+    padding:0 2rem;
+    border-radius: 1rem;
+    display:flex;
+    align-items: center;
+    background:#fff;
+    width: 100%;
+}
+.header__mega-menu--item:hover{
+    background:#f5f5f5;
+}
+.header__mega-menu--item:hover .header__mega-menu--item__arrow{
+    opacity:1;
+}
+.header__mega-menu--item__img{
+    margin-right: 2rem;
+}
+.header__mega-menu--item__content{
+    max-width:26rem;
+    width:100%;
+    margin-right: 2rem;
+    white-space: normal;
+}
+.header__mega-menu--item__content h2{
+    font-size:1.5rem;
+    font-weight:400;
+    color:#1E2329;
+    padding-bottom: 2px;
+}
+.header__mega-menu--item__content h2 span{
+    border:1px solid #aaa;
+    width:16px;
+    height:16px;
+    display:inline-flex;
+    border-radius: 50%;
+    justify-content: center;
+    align-items: center;
+    margin-left:2px;
+    margin-right: 2px;
+    font-size:1.2rem;
+}
+.header__mega-menu--item__content p{
+    font-size:1.3rem;
+    color:#707A8A;
+}
+.header__mega-menu--item__arrow{
+    /* margin-left: auto; */
+    color:#F0b90b;
+    opacity:0;
+    transition: 400ms ease;
+}
+
+/* ---- Header mega menu apps hover link up ---- */
+.header__mega-menu--apps{
+    left:14rem;
+}
+.header__main--item--apps-hov:hover .header__mega-menu--apps{
+    display:flex;
+}
+
+/* ---- Header mega menu buy crypto hover link up ---- */
+
+.header__mega-menu--buy-crypto{
+    left:20rem;
+}
+.header__mega-menu--buy-crypto__pay{
+    display:flex;
+    justify-content: space-between;
+    margin-bottom: 1rem;
+}
+.header__mega-menu--buy-crypto__pay > div{
+    display:flex;
+    align-items: center;
+}
+.header__mega-menu--buy-crypto__pay > div > img{
+    margin-right: 5px;
+}
+.header__mega-menu--buy-crypto__pay > div > svg{
+    transform: rotate(-90deg);
+    margin-left: 5px;
+}
+.header__main--item--buy-crypto-hov:hover .header__mega-menu--buy-crypto{
+    display:flex;
+}
+
+/* ---- Header mega menu trade hover link up ---- */
+
+.header__mega-menu--trade{
+    left:38rem;
+}
+.header__main--item--trade-hov:hover .header__mega-menu--trade{
+    display:flex;
+}
+
+/* ---- Header mega menu derivatives hover link up ---- */
+
+.header__mega-menu--derivatives{
+    left:45rem;
+}
+.header__main--item--derivatives-hov:hover .header__mega-menu--derivatives{
+    display:flex;
+}
+
+/* ---- Header mega menu earn hover link up ---- */
+
+.header__mega-menu--earn{
+    left:52rem;
+}
+.header__main--item--earn-hov:hover .header__mega-menu--earn{
+    display:flex;
+}
+
+/* ---- Header mega menu finance hover link up ---- */
+
+.header__mega-menu--finance{
+    left:63rem;
+}
+.header__main--item--finance-hov:hover .header__mega-menu--finance{
+    display:flex;
+}
+
+/* ---- Header mega menu institutional hover link up ---- */
+
+.header__mega-menu--institutional{
+    right:47rem;
+}
+.header__main--item--institutional-hov:hover .header__mega-menu--institutional{
+    display:flex;
+}
