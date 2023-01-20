@@ -43,6 +43,9 @@ html{
     width:90%;
     margin:0 auto;
 }
+.max-wrapper-top-space{
+    padding-top: 5rem;
+}
 
 /* Mobile Banner */
 
@@ -467,7 +470,7 @@ html{
 
 .header{
     padding-top:8rem;
-    padding-bottom:3rem;
+    padding-bottom:4rem;
     background-image: url("./assets/images/web-background-image.png");
 }
 .header__main{
@@ -622,5 +625,44 @@ html{
     }
     .header__stats--stat p{
         font-size: 1.4rem;
+    }
+}
+
+
+
+/*   
+
+Binance Academy
+
+*/
+
+.binance-academy{
+    border-top-left-radius: 2.5rem;
+    border-top-right-radius: 2.5rem;
+    background:#fff;
+    padding-top: 3.2rem;
+}
+.binance-academy__image{
+    width:100%;
+    border-radius: 2rem;
+    height:30rem;
+    background:url("./assets/images/desktop-en.png");
+    background-repeat: no-repeat;
+    background-position: left;
+    background-size: cover;
+}
+@media screen and (max-width:1024px){
+    .binance-academy__image{
+        height:24rem;
+    }
+}
+@media screen and (max-width:768px){
+    .binance-academy__image{
+        background-size: contain;
+    }
+}
+@media screen and (max-width:425px){
+    .binance-academy__image{
+        height:15rem;
     }
 }
