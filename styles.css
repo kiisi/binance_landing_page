@@ -130,40 +130,35 @@ html{
     color:var(--yellow-dark);
 }
 
-/* Header */
+/* Navigation */
 
-.header{
+.navigation{
     padding:0 2rem;
     display:flex;
     align-items: center;
     cursor:pointer;
     position:relative;
 }
-/* @media screen and (max-width:1080px){
-    .header{
-        padding:2rem 2rem;
-    }
-} */
-.header__logo{
+.navigation__logo{
     margin-right: 2rem;
     padding-top: 2.5rem;
     padding-bottom: 2rem;
 }
-.header__logo svg{
+.navigation__logo svg{
     fill: var(--yellow-strong);
     color: var(--yellow-strong);
     width:120px;
     height:24px;
 }
-.header__main{
+.navigation__main{
     display:flex;
 }
 @media screen and (max-width:1080px){
-    .header__main{
+    .navigation__main{
         display:none;
     }
 }
-.header__main--item{
+.navigation__main--item{
     padding: 2rem 0;
     display:flex;
     align-items: center;
@@ -172,104 +167,109 @@ html{
     font-size:1.5rem;
     white-space:nowrap;
 }
-.header__main--item:not(:last-child){
+.navigation__main--item:not(:last-child){
     margin-right: 1.2rem;
 }
-.header__main--item:hover > span{
+.navigation__main--item:hover > span{
     color:var(--yellow-dark-hover);
 }
-.header__main--item:hover .header__main--item__apps{
+.navigation__main--item:hover .navigation__main--item__apps{
     color:var(--yellow-light-hover);
 }
-.header__main--item:hover .header__main--item__dropdown{
+.navigation__main--item:hover .navigation__main--item__dropdown{
     transform: rotate(-180deg);
 }
-.header__main--item__dropdown{
+.navigation__main--item__dropdown{
     color:#707A8A;
     transition: 250ms ease;
 }
-.header__sub{
+.navigation__sub{
     display:flex;
     align-items: center;
     font-size:1.5rem;
     margin-left: auto;
 }
-.header__sub--auth{
+.navigation__sub--auth{
     display:flex;
     align-items: center;
 }
-.header__sub--auth__btn{
+@media screen and (max-width:320px){
+    .navigation__sub--auth{
+        display:none;
+    }    
+}
+.navigation__sub--auth__btn{
     display:flex;
     align-items: center;
-    padding:8px 12px;
+    padding:6px 12px;
     background:rgb(252,213,53);
     color:rgb(24,26,32);
     border-radius: 4px;
     font-size:1.4rem;
     margin-right: 2rem;
 }
-.header__sub--auth__btn svg{
-    height:1.8rem;
-    width:1.8rem;
-    margin-right: 5px;
+.navigation__sub--auth__btn svg{
+    height:1.6rem;
+    width:1.6rem;
+    margin-right: 8px;
 }
-.header__sub--auth__btn--login{
+.navigation__sub--auth__btn--login{
     background: #fff;
 }
-.header__sub--auth__btn--login:hover{
+.navigation__sub--auth__btn--login:hover{
     color:var(--yellow-light-hover);
 }
 @media screen and (max-width:1160px){
-    .header__sub--auth__btn--login{
+    .navigation__sub--auth__btn--login{
         display:none;
     }
 }
-.header__sub--settings{
+.navigation__sub--settings{
     display:flex;
     align-items: center;
 }
-.header__sub--settings__download{
+.navigation__sub--settings__download{
     margin-right:1.5rem;
     margin-left:5px;
 }
-.header__sub--settings__language{
+.navigation__sub--settings__language{
     margin-right: 5px;
     font-size: 21px;
 }
-.header__sub--settings__currency{
+.navigation__sub--settings__currency{
     font-size: 1.4rem;
 }
-.header__sub--settings__divider{
+.navigation__sub--settings__divider{
     width:1px;
     margin: 0 5px;
     background:#aaa;
     height:12px;
 }
-.header__sub--settings__theme{
+.navigation__sub--settings__theme{
     font-size: 1.8rem;
 }
 @media screen and (max-width:1300px){
-    .header__sub--settings__download,
-    .header__sub--settings__language, 
-    .header__sub--settings__currency,
-    .header__sub--settings__divider,
-    .header__sub--settings__theme{
+    .navigation__sub--settings__download,
+    .navigation__sub--settings__language, 
+    .navigation__sub--settings__currency,
+    .navigation__sub--settings__divider,
+    .navigation__sub--settings__theme{
         display:none;
     }
 }
-.header__sub--menu{
+.navigation__sub--menu{
     display:none;
     place-items: center;
 }
 @media screen and (max-width:1300px){
-    .header__sub--menu{
+    .navigation__sub--menu{
         display:grid;
     }
 }
 
 /* ------ Header mega menu apps ------- */
 
-.header__mega-menu{
+.navigation__mega-menu{
     position: absolute;
     top:100%;
     box-shadow: 0px 0px 20px rgb(0 0 0 / 8%);
@@ -280,7 +280,7 @@ html{
     display:flex;
     display:none;
 }
-.header__mega-menu--item{
+.navigation__mega-menu--item{
     height:7.5rem;
     padding:0 2rem;
     border-radius: 1rem;
@@ -289,28 +289,28 @@ html{
     background:#fff;
     width: 100%;
 }
-.header__mega-menu--item:hover{
+.navigation__mega-menu--item:hover{
     background:#f5f5f5;
 }
-.header__mega-menu--item:hover .header__mega-menu--item__arrow{
+.navigation__mega-menu--item:hover .navigation__mega-menu--item__arrow{
     opacity:1;
 }
-.header__mega-menu--item__img{
+.navigation__mega-menu--item__img{
     margin-right: 2rem;
 }
-.header__mega-menu--item__content{
+.navigation__mega-menu--item__content{
     max-width:26rem;
     width:100%;
     margin-right: 2rem;
     white-space: normal;
 }
-.header__mega-menu--item__content h2{
+.navigation__mega-menu--item__content h2{
     font-size:1.5rem;
     font-weight:400;
     color:#1E2329;
     padding-bottom: 2px;
 }
-.header__mega-menu--item__content h2 span{
+.navigation__mega-menu--item__content h2 span{
     border:1px solid #aaa;
     width:16px;
     height:16px;
@@ -322,11 +322,11 @@ html{
     margin-right: 2px;
     font-size:1.2rem;
 }
-.header__mega-menu--item__content p{
+.navigation__mega-menu--item__content p{
     font-size:1.3rem;
     color:#707A8A;
 }
-.header__mega-menu--item__arrow{
+.navigation__mega-menu--item__arrow{
     /* margin-left: auto; */
     color:#F0b90b;
     opacity:0;
@@ -334,79 +334,110 @@ html{
 }
 
 /* ---- Header mega menu apps hover link up ---- */
-.header__mega-menu--apps{
+.navigation__mega-menu--apps{
     left:14rem;
 }
-.header__main--item--apps-hov:hover .header__mega-menu--apps{
+.navigation__main--item--apps-hov:hover .navigation__mega-menu--apps{
     display:flex;
 }
 
 /* ---- Header mega menu buy crypto hover link up ---- */
 
-.header__mega-menu--buy-crypto{
+.navigation__mega-menu--buy-crypto{
     left:20rem;
 }
-.header__mega-menu--buy-crypto__pay{
+.navigation__mega-menu--buy-crypto__pay{
     display:flex;
     justify-content: space-between;
     margin-bottom: 1rem;
 }
-.header__mega-menu--buy-crypto__pay > div{
+.navigation__mega-menu--buy-crypto__pay > div{
     display:flex;
     align-items: center;
 }
-.header__mega-menu--buy-crypto__pay > div > img{
+.navigation__mega-menu--buy-crypto__pay > div > img{
     margin-right: 5px;
 }
-.header__mega-menu--buy-crypto__pay > div > svg{
+.navigation__mega-menu--buy-crypto__pay > div > svg{
     transform: rotate(-90deg);
     margin-left: 5px;
 }
-.header__main--item--buy-crypto-hov:hover .header__mega-menu--buy-crypto{
+.navigation__main--item--buy-crypto-hov:hover .navigation__mega-menu--buy-crypto{
     display:flex;
 }
 
 /* ---- Header mega menu trade hover link up ---- */
 
-.header__mega-menu--trade{
+.navigation__mega-menu--trade{
     left:38rem;
 }
-.header__main--item--trade-hov:hover .header__mega-menu--trade{
+.navigation__main--item--trade-hov:hover .navigation__mega-menu--trade{
     display:flex;
 }
 
 /* ---- Header mega menu derivatives hover link up ---- */
 
-.header__mega-menu--derivatives{
+.navigation__mega-menu--derivatives{
     left:45rem;
 }
-.header__main--item--derivatives-hov:hover .header__mega-menu--derivatives{
+.navigation__main--item--derivatives-hov:hover .navigation__mega-menu--derivatives{
     display:flex;
 }
 
 /* ---- Header mega menu earn hover link up ---- */
 
-.header__mega-menu--earn{
+.navigation__mega-menu--earn{
     left:52rem;
 }
-.header__main--item--earn-hov:hover .header__mega-menu--earn{
+.navigation__main--item--earn-hov:hover .navigation__mega-menu--earn{
     display:flex;
 }
 
 /* ---- Header mega menu finance hover link up ---- */
 
-.header__mega-menu--finance{
+.navigation__mega-menu--finance{
     left:63rem;
 }
-.header__main--item--finance-hov:hover .header__mega-menu--finance{
+.navigation__main--item--finance-hov:hover .navigation__mega-menu--finance{
     display:flex;
 }
 
 /* ---- Header mega menu institutional hover link up ---- */
 
-.header__mega-menu--institutional{
+.navigation__mega-menu--institutional{
     right:47rem;
 }
-.header__main--item--institutional-hov:hover .header__mega-menu--institutional{
+.navigation__main--item--institutional-hov:hover .navigation__mega-menu--institutional{
     display:flex;
+}
+
+
+
+/* Redeem Gift */
+
+.redeem-gift{
+    padding:1rem 2rem;
+    background:#FEF6D8;
+    display:grid;
+    place-items:center;
+}
+.redeem-gift__content{
+    font-size: 1.3rem;
+    display:flex;
+    align-items: center;
+    column-gap: 2rem;
+}
+.redeem-gift__content--main{
+    display:flex;
+    align-items: center;
+}
+.redeem-gift__content--main img{
+    margin-right: 6px;
+}
+.redeem-gift__content--btn{
+    padding:4px 8px;
+    border-radius: 4px;
+    background:#FCD535;
+    font-size:1.3rem;
+    white-space: nowrap;
 }
