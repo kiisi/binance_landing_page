@@ -569,6 +569,11 @@ html{
     display:grid;
     place-items: center;
 }
+@media screen and (max-width:768px){
+    .header__main--image{
+        display:none;
+    }
+}
 .header__main--image > img{
     width:100%;
     height:100%;
