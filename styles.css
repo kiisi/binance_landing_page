@@ -43,9 +43,20 @@ html{
     width:90%;
     margin:0 auto;
 }
-.max-wrapper-top-space{
-    padding-top: 5rem;
+.std-top-space{
+    padding-top: 10rem;
 }
+.std-title{
+    font-size: 4rem;
+    color:rgb(30, 35, 41);
+    font-weight:600;
+}
+@media screen and (max-width:768px){
+    .std-title{
+        font-size: 2.5rem;
+    }
+}
+
 
 /* Mobile Banner */
 
@@ -608,7 +619,7 @@ html{
     padding: 4rem 0;
 }
 .header__stats--stat h1{
-    font-size: 4.2rem;
+    font-size: 4rem;
     color:rgb(30, 35, 41);
 }
 .header__stats--stat p{
@@ -659,10 +670,78 @@ Binance Academy
 @media screen and (max-width:768px){
     .binance-academy__image{
         background-size: contain;
+        border-radius:0;
+    }
+}
+@media screen and (max-width:600px){
+    .binance-academy__image{
+        height:12rem;
     }
 }
 @media screen and (max-width:425px){
     .binance-academy__image{
-        height:15rem;
+        height:10rem;
     }
+}
+
+
+/* Popular Cryptocurrencies  */
+
+.popular-cryptocurrencies__title{
+    display:flex;
+    justify-content: space-between;
+    margin-bottom: 4rem;
+    align-items: center;
+}
+.popular-cryptocurrencies__title div{
+    display:flex;
+    align-items:center;
+    white-space: nowrap;
+    color:#929aa5;
+}
+.popular-cryptocurrencies__title div span{
+    font-size:1.4rem;
+    font-weight:500;
+}
+.popular-cryptocurrencies__content--item{
+    grid-template-columns: 2fr 1fr 1fr 1fr;
+    display:grid;
+    font-size: 1.5rem;
+    padding: 2rem 0;
+    color:#707A8A;
+}
+.popular-cryptocurrencies__content--item > span:not(:first-child, :last-child){
+    display:flex;
+    justify-content:center;
+}
+.popular-cryptocurrencies__content--item > span:last-child{
+    display:flex;
+    justify-content:right; 
+}
+.popular-cryptocurrencies__content--item__data{
+    padding:1.5rem 1.5rem;
+    margin-left:-1%;
+    margin-right: -1%;
+    border-radius: 4px;
+}
+.popular-cryptocurrencies__content--item__data:hover{
+    background:#F5F5F5;
+}
+.popular-cryptocurrencies__content--item__data > div{
+    display:flex;
+    align-items: center;
+}
+.popular-cryptocurrencies__content--item__data > div > img{
+    height: 3.2rem;
+    width:3.2rem;
+}
+.popular-cryptocurrencies__content--item__data > div > h2{
+    font-weight:600;
+    font-size: 1.6rem;
+    color:#1E2329;
+    padding-left: 1.5rem;
+    padding-right: .8rem;
+}
+.popular-cryptocurrencies__content--item__data > div > span{
+    font-size:1.4rem;
 }
