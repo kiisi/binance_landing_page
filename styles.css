@@ -698,9 +698,8 @@ Binance Academy
     align-items:center;
     white-space: nowrap;
     color:#929aa5;
-}
-.popular-cryptocurrencies__title div span{
-    font-size:1.4rem;
+    font-size:1.5rem;
+    font-family: var(--secondary-font);
     font-weight:500;
 }
 @media screen and (max-width:768px){
@@ -804,4 +803,31 @@ Binance Academy
     .popular-cryptocurrencies__content--item__data > div > span{
         font-size:1.3rem;
     }
+}
+.popular-cryptocurrencies__footer--market{
+    margin:3rem 0;
+    display:flex;
+    align-items:center;
+    white-space: nowrap;
+    color:#929aa5;
+    font-size:1.5rem;
+    font-family: var(--secondary-font);
+    font-weight:500;
+}
+.popular-cryptocurrencies__footer > p{
+    font-size:2.4rem;
+    font-weight:600;
+    margin-bottom:3.2rem;
+    color:#1E2329;
+}
+.popular-cryptocurrencies__footer--btn{
+    padding: 1.3rem;
+    background: #FBD849;
+    display: grid;
+    place-items: center;
+    font-size: 1.8rem;
+    border-radius: 5px;
+    width: 100%;
+    font-weight: 500;
+    font-family: var(--secondary-font);
 }
