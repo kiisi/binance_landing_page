@@ -828,6 +828,12 @@ Binance Academy
     font-size: 1.8rem;
     border-radius: 5px;
     width: 100%;
+    max-width:20rem;
     font-weight: 500;
     font-family: var(--secondary-font);
+}
+@media screen and (max-width:768px){
+    .popular-cryptocurrencies__footer--btn{
+        max-width: 100%;
+    }
 }
