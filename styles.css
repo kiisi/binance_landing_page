@@ -57,6 +57,25 @@ html{
     }
 }
 
+/* Button Style */
+
+.btn{
+    padding: 1.3rem;
+    background: #FBD849;
+    display: grid;
+    place-items: center;
+    font-size: 1.8rem;
+    border-radius: 5px;
+    width: 100%;
+    max-width:20rem;
+    font-weight: 500;
+    font-family: var(--secondary-font);
+}
+@media screen and (max-width:768px){
+    .btn{
+        max-width: 100%;
+    }
+}
 
 /* Mobile Banner */
 
@@ -820,20 +839,68 @@ Binance Academy
     margin-bottom:3.2rem;
     color:#1E2329;
 }
-.popular-cryptocurrencies__footer--btn{
-    padding: 1.3rem;
-    background: #FBD849;
-    display: grid;
-    place-items: center;
-    font-size: 1.8rem;
-    border-radius: 5px;
-    width: 100%;
-    max-width:20rem;
-    font-weight: 500;
+
+
+/* 
+
+Trade Bitcoin
+
+*/
+
+.trade-bitcoin{
     font-family: var(--secondary-font);
 }
+
+.trade-bitcoin .max-wrapper__content{
+    background:#FFFDE6;
+    border-radius: 1.6rem;
+    padding:4rem;
+    display:flex;
+    column-gap: 4rem;
+    row-gap: 4rem;
+}
 @media screen and (max-width:768px){
-    .popular-cryptocurrencies__footer--btn{
-        max-width: 100%;
+    .trade-bitcoin .max-wrapper__content{
+        flex-direction:column;
+        padding:2rem;
+    } 
+}
+.trade-bitcoin__image{
+    display:grid;
+    place-items:center;
+}
+.trade-bitcoin__image img{
+    height:100%;
+    width:100%;
+    max-width:32.5rem;
+    max-height:23.5rem;
+}
+@media screen and (max-width:1024px){
+    .trade-bitcoin__image img{
+        height:100%;
+        width:100%;
+        max-width:24rem;
+        max-height:17.4rem;
     }
+}
+.trade-bitcoin__caption h1{
+    font-size:3.2rem;
+    font-weight:600;
+    color:#1E2329;
+    margin-bottom:2rem;
+}
+@media screen and (max-width:768px){
+    .trade-bitcoin__caption h1{
+        font-size:2.4rem;
+    }  
+}
+.trade-bitcoin__caption p{
+    display:flex;
+    font-size:1.55rem;
+    color:#1E2329;
+    margin-bottom: 2rem;
+}
+.trade-bitcoin__caption p > svg{
+    height:1.5rem;
+    width:1.5rem;
 }
