@@ -898,9 +898,113 @@ Trade Bitcoin
     display:flex;
     font-size:1.55rem;
     color:#1E2329;
-    margin-bottom: 2rem;
+    margin-bottom: 2.5rem;
 }
 .trade-bitcoin__caption p > svg{
     height:1.5rem;
     width:1.5rem;
+}
+
+
+/* 
+
+Crypto Portfolio
+
+*/
+
+.crypto-portfolio__mobile-title{
+    display:none;
+}
+.crypto-portfolio__mobile-title h1{
+    font-size:3rem;
+    font-weight:600;
+}
+@media screen and (max-width:1024px){
+    .crypto-portfolio__mobile-title{
+        display:block;
+        margin-bottom: 8rem;
+    }
+}
+.crypto-portfolio__mobile-title p{
+    font-weight:400;
+    font-size:1.8rem;
+    color:#474D57;
+    padding-top:8px;
+}
+@media screen and (max-width:768px){
+    .crypto-portfolio__mobile-title p{
+        font-size:1.6rem;
+    }
+}
+.crypto-portfolio__box--main__title{
+    margin-bottom: 8rem;
+}
+@media screen and (max-width:1024px){
+    .crypto-portfolio__box--main__title{
+        display:none;
+    }
+}
+.crypto-portfolio__box--main__title p{
+    font-weight:400;
+    font-size:2rem;
+    color:#474D57;
+    padding-top:8px;
+}
+.crypto-portfolio__box{
+    display:flex;
+    column-gap: 6rem;
+    row-gap: 8rem;
+}
+@media screen and (max-width:1024px){
+    .crypto-portfolio__box{
+        flex-direction: column-reverse;
+    }
+}
+.crypto-portfolio__box--main{
+    flex:1;
+    width:100%;
+    max-width:70rem;
+}
+.crypto-portfolio__box--image{
+    display:flex;
+    justify-content: center;
+}
+.crypto-portfolio__box--image img{
+    width:100%;
+    height:100%;
+    max-width:33.5rem;
+    max-height:67.6rem;
+}
+@media screen and (max-width:1024px){
+    .crypto-portfolio__box--image img{
+        width:100%;
+        height:100%;
+        max-width:19rem;
+        max-height:38.3rem;
+    }
+}
+.crypto-portfolio__box--main__content--card{
+    display:flex;
+    column-gap: 4rem;
+    align-items: center;
+    margin-bottom:6rem;
+}
+@media screen and (max-width:768px){
+    .crypto-portfolio__box--main__content--card{
+        display:block;
+    }
+}
+.crypto-portfolio__box--main__content--card__caption h2{
+    font-size:2.4rem;
+    font-weight:600;
+    padding-bottom:1rem;
+}
+@media screen and (max-width:768px){
+    .crypto-portfolio__box--main__content--card__caption h2{
+        font-size:2rem;
+    }
+}
+.crypto-portfolio__box--main__content--card__caption p{
+    font-size:1.5rem;
+    color:#474D57;
 }
