@@ -1154,7 +1154,7 @@ Explore endless possibilities with Binance
 }
 .explore__content{
     display:flex;
-    column-gap: 1rem;
+    column-gap: 2rem;
 }
 .explore__content--card{
     padding: 2.8rem 2.4rem;
@@ -1171,7 +1171,7 @@ Explore endless possibilities with Binance
 @media screen and (max-width:1024px){
     .explore__content{
         flex-direction:column;
-        row-gap:1rem;
+        row-gap:3rem;
     }
     .explore__content--card{
         max-width:100%;
@@ -1183,7 +1183,6 @@ Explore endless possibilities with Binance
 @media screen and (max-width:768px){
     .explore__content--card{
         flex-direction: column;
-        row-gap:2rem;
     }
 }
 .explore__content--card:hover{
