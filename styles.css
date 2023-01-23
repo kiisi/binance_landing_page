@@ -1148,3 +1148,106 @@ Daily Rewards
 Explore endless possibilities with Binance
 
 */
+
+.explore__title{
+    padding-bottom: 6rem;
+}
+.explore__content{
+    display:flex;
+    column-gap: 1rem;
+}
+.explore__content--card{
+    padding: 2.8rem 2.4rem;
+    width:100%;
+    max-width:38rem;
+    background:#fafafa;
+    height:58rem;
+    display:flex;
+    flex-direction: column;
+    border-radius: 1rem;
+    font-family:var(--secondary-font);
+    justify-content: space-between;
+}
+@media screen and (max-width:1024px){
+    .explore__content{
+        flex-direction:column;
+        row-gap:1rem;
+    }
+    .explore__content--card{
+        max-width:100%;
+        flex-direction: row;
+        height:auto;
+        align-items:center;
+    }
+}
+@media screen and (max-width:768px){
+    .explore__content--card{
+        flex-direction: column;
+        row-gap:2rem;
+    }
+}
+.explore__content--card:hover{
+    box-shadow: rgb(24 26 32 / 16%) 0px 8px 16px;
+}
+.explore__content--card:nth-child(2){
+    flex-direction: column-reverse;
+}
+@media screen and (max-width:1024px){
+    .explore__content--card:nth-child(2){
+        flex-direction: row-reverse;
+    }
+}
+@media screen and (max-width:768px){
+    .explore__content--card:nth-child(2){
+        flex-direction: column-reverse;
+    }
+}
+.explore__content--card__image img{
+    width:100%;
+    height:100%;
+    max-height:22rem;
+}
+@media screen and (max-width:1024px){
+    .explore__content--card__image img{
+        max-width:28rem;
+    }
+    .explore_content--card__caption{
+        max-width:30rem;
+    }
+} 
+@media screen and (max-width:768px){
+    .explore_content--card__caption{
+        max-width:100%;
+    }
+}
+.explore_content--card__caption--content > div h1{
+    padding-bottom:2rem;
+    font-size:2.8rem;
+    font-weight:500;
+}
+.explore_content--card__caption--content > div p{
+    font-size:1.55rem;
+    color:rgb(30, 35, 41);
+    line-height:24px;
+}
+.explore_content--card__caption--learn{
+    font-size:1.5rem;
+    padding-top: 2rem;
+    color:rgb(201, 148, 0);
+    display:none;
+}
+@media screen and (max-width:1024px){
+    .explore_content--card__caption--content > div h1{
+        font-size:2.2rem;
+    }
+    .explore_content--card__caption--learn{
+        display:block;
+    }
+}
+.explore__content--card:hover .explore_content--card__caption--learn{
+    display:block;
+}
+
+.explore .btn{
+    margin-top:5rem;
+}
