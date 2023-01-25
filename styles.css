@@ -59,6 +59,11 @@ html{
     color:#474D57;
     padding-top:8px;
 }
+@media screen and (max-width:1024px){
+    .std-title{
+        font-size: 3.2rem;
+    }
+}
 @media screen and (max-width:768px){
     .std-title{
         font-size: 2.5rem;
@@ -835,7 +840,7 @@ Binance Academy
     }
 }
 .popular-cryptocurrencies__footer--market{
-    margin:3rem 0;
+    margin-top:3rem;
     display:flex;
     align-items:center;
     white-space: nowrap;
@@ -843,11 +848,17 @@ Binance Academy
     font-size:1.5rem;
     font-family: var(--secondary-font);
     font-weight:500;
+    display:none;
+}
+@media screen and (max-width:768px){
+    .popular-cryptocurrencies__footer--market{
+        display:flex;
+    }
 }
 .popular-cryptocurrencies__footer > p{
     font-size:2.4rem;
     font-weight:600;
-    margin-bottom:3.2rem;
+    margin:3.2rem 0;
     color:#1E2329;
 }
 
@@ -1246,7 +1257,104 @@ Explore endless possibilities with Binance
 .explore__content--card:hover .explore_content--card__caption--learn{
     display:block;
 }
-
 .explore .btn{
     margin-top:5rem;
 }
+
+
+/* 
+
+Trusted Crypto Exchange
+
+*/
+
+.trusted-exchange__title{
+    display:flex;
+    padding-bottom:6rem;
+}
+.trusted-exchange__title > div{
+    flex:1;
+}
+.trusted-exchange__title > p{
+    white-space: nowrap;
+    color: #929aa5;
+    font-size: 1.5rem;
+    font-family: var(--secondary-font);
+    font-weight: 400;
+    padding-top:1.8rem;
+}
+.trusted-exchange__title > p > span{
+    display:flex;
+    align-items:center;
+}
+@media screen and (max-width:1024px){
+    .trusted-exchange__title{
+        flex-direction: column;
+    }
+}
+.trusted-exchange__content{
+    display:flex;
+    column-gap:3rem;
+    row-gap:6rem;
+}
+@media screen and (max-width:1024px){
+    .trusted-exchange__content{
+        flex-direction: column-reverse;
+    }
+}
+.trusted-exchange__content > div{
+    flex-basis:50%
+}
+.trusted-exchange__content--card{
+    display:flex;
+    column-gap:2rem;
+}
+@media screen and (max-width:768px){
+    .trusted-exchange__content--card{
+        display:block;
+    }
+}
+.trusted-exchange__content--card:not(:last-child){
+    margin-bottom:4rem;
+}
+.trusted-exchange__content--card
+.trusted-exchange__content--card__caps h2{
+    font-weight:500;
+    font-size:2rem;
+    padding-bottom:5px;
+}
+.trusted-exchange__content--card__caps p{
+    font-weight:400;
+    font-size:1.4rem;
+    color: #474D57;
+}
+.trusted-exchange__content--card > img{
+    height:7.2rem;
+    width:7.2rem;
+}
+@media screen and (max-width:768px){
+    .trusted-exchange__content--card > img{
+        height:5.6rem;
+        width:5.6rem;
+    }
+}
+.trusted-exchange__content--image{
+    display:grid;
+    place-items:center;
+}
+.trusted-exchange__content--image img{
+    width:100%;
+    height:100%;
+    max-width:58.8rem;
+    max-height:33rem;
+}
+.trusted-exchange .btn{
+    margin-top:3rem;
+}
+
+
+/* 
+
+    Trade on the go. Anywhere, anytime.
+
+ */
