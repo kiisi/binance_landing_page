@@ -163,6 +163,7 @@ html{
     font-weight:500;
     position:sticky;
     top:0;
+    width:100%;
     z-index:9999;
 }
 .banner__content{
@@ -1639,8 +1640,17 @@ Binance Footer
 
 .footer{
     display:grid;
-    grid-template-columns: 1fr 1fr 1fr 2fr 1fr;
+    grid-template-columns: 1fr 1fr 1fr 2fr 1.1fr;
     column-gap:1rem;
+}
+@media screen and (max-width:1024px){
+    .footer{
+        grid-template-columns: 1fr 1fr 1fr 1fr;
+        row-gap:5rem;
+    } 
+    .footer__links:last-child{
+        grid-column: 1/span 4;
+    }
 }
 .footer__links h1{
     color:#1E2329;
@@ -1650,12 +1660,18 @@ Binance Footer
 }
 .footer__links--link p{
     font-size:1.4rem;
-    padding-top:8px;
+    padding-bottom:8px;
     color:#707A8A;
 }
 .footer__links--double{
     display:flex;
     column-gap: 1rem;   
+}
+@media screen and (max-width:1024px){
+    .footer__links--double{
+        flex-direction: column;  
+        row-gap:2rem;
+    }
 }
 .footer__links--community{
     display:flex;
@@ -1669,4 +1685,11 @@ Binance Footer
     margin-bottom:2.4rem;
     width:2.5rem;
     height:2.5rem;
+}
+@media screen and (max-width:768px){
+    .footer{
+        display:flex;
+        flex-direction:column;
+        row-gap:2rem;
+    } 
 }
