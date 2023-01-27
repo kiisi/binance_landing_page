@@ -35,6 +35,10 @@ html{
     --yellow-dark-hover:rgb(201,148,0);
 }
 
+.std-title-more:hover{
+    color:#F0B90B;
+}
+
 /* Max wrappers utility class */
 
 .max-wrapper{
@@ -1315,7 +1319,7 @@ Trusted Crypto Exchange
     }
 }
 .trusted-exchange__content--card:not(:last-child){
-    margin-bottom:4rem;
+    margin-bottom:5rem;
 }
 .trusted-exchange__content--card
 .trusted-exchange__content--card__caps h2{
@@ -1325,7 +1329,7 @@ Trusted Crypto Exchange
 }
 .trusted-exchange__content--card__caps p{
     font-weight:400;
-    font-size:1.4rem;
+    font-size:1.5rem;
     color: #474D57;
 }
 .trusted-exchange__content--card > img{
@@ -1349,7 +1353,7 @@ Trusted Crypto Exchange
     max-height:33rem;
 }
 .trusted-exchange .btn{
-    margin-top:3rem;
+    margin-top:5rem;
 }
 
 
@@ -1358,3 +1362,196 @@ Trusted Crypto Exchange
     Trade on the go. Anywhere, anytime.
 
  */
+
+.trade__title{
+    display:flex;
+    padding-bottom:10rem;
+}
+.trade__title > div{
+    flex:1;
+}
+.trade__title > p{
+    white-space: nowrap;
+    color: #707A8A;
+    font-size: 1.5rem;
+    font-family: var(--secondary-font);
+    font-weight: 400;
+    padding-top:1.8rem;
+}
+.trade__title > p > span{
+    display:flex;
+    align-items:center;
+}
+@media screen and (max-width:1024px){
+    .trade__title{
+        flex-direction: column;
+    }
+}
+@media screen and (max-width:768px){
+    .trade__title > p{
+        display:none;
+    }
+}
+.trade__content{
+    display:flex;
+    column-gap: 12rem;
+}
+.trade__content--image{
+    flex-basis:50%;
+    display: flex;
+    align-items:center;
+    justify-content:center;
+}
+.trade__content--image > img{
+    height:100%;
+    width:100%;
+    max-width:72.4rem;
+    max-height:43.5rem;
+    object-fit: contain;
+}
+.trade__content--image__1024px{
+    display:none;
+}
+@media screen and (max-width:1024px){
+    .trade__content{
+        column-gap: 6rem;
+    }
+    .trade__content--image__desktop{
+        display:none;
+    }
+    .trade__content--image__1024px{
+        display:block;
+    }
+    .trade__content--image > img{
+        max-width:134rem;
+        max-height:270.4rem;
+    }
+    .trade__content--download__apps--app:nth-child(4),
+    .trade__content--download__apps--app:nth-child(5),
+    .trade__content--download__apps--app:nth-child(6){
+        display:none;
+    }
+}
+
+@media screen and (max-width:768px){
+    .trade__content{
+        flex-direction:column;
+    }
+    .trade__content--image{
+        padding-bottom:55%;
+        background:url("./assets/images/portfolio-section.webp") no-repeat;
+        background-position:top center;
+        background-size: auto 190%;
+    }
+    .trade__content--image > img{
+        display:none;
+    }
+    .trade__content--download__apps--app:nth-child(3){
+        display:none;
+    }
+}
+
+
+.trade__content--download{
+    flex-basis: 50%;
+}
+@media screen and (max-width:768px){
+    .trade__content--download{
+        display:flex;
+        flex-direction: column-reverse;
+    } 
+}
+.trade__content--download__scan{
+    display:flex;
+    padding:1.6rem;
+    background:#FAFAFA;
+    border-radius:8px;
+    width:100%;
+}
+.trade__content--download__scan-qrcode{
+    position:relative;
+    width:fit-content;
+}
+.trade__content--download__scan-qrcode img{
+    height: 2rem;
+    width:2rem;
+    position:absolute;
+    top:50%;
+    left:50%;
+    transform:translate(-50%, -50%)
+}
+.trade__content--download__scan-text{
+    margin-left:2rem;
+    margin-top:auto;
+    margin-bottom:auto;
+}
+.trade__content--download__scan-text p{
+    color:#707A8A;
+    font-size:1.6rem;
+}
+.trade__content--download__scan-text h1{
+    color:#1E2329;
+    font-size:2rem;
+    font-weight:600;
+    margin-top:2px;
+}
+.trade__content--download__apps{
+    display:grid;
+    grid-template-columns: repeat(3, 1fr);
+    margin-top:5rem;
+}
+.trade__content--download__apps--app > div{
+    display:grid;
+    place-items:center;
+    width:fit-content;
+    border-radius:8px;
+    padding:8px 0;
+    width:10rem;
+    margin-bottom:4rem;
+}
+@media screen and (max-width:768px){
+    .trade__content--download__apps--app{
+        display:grid;
+        place-items:center;
+    }
+}
+.trade__content--download__apps--app > div:hover{
+    background:#F5F5F5;
+}
+.trade__content--download__apps--app svg{
+    height:3.2rem;
+    width:3.2rem;
+}
+.trade__content--download__apps--app p{
+    font-size:1.3rem;
+    font-weight:400;
+    padding-top: 6px;
+}
+.trade__footer{
+    margin-top:1rem;
+    display:none;
+}
+.trade__footer > span{
+    white-space: nowrap;
+    color: #707A8A;
+    font-size: 1.4rem;
+    font-family: var(--secondary-font);
+    font-weight: 400;
+    padding-top:1.8rem;
+    display:flex;
+    align-items:center;
+}
+
+@media screen and (max-width:768px){
+    .trade__footer{
+        display:block;
+    }
+}
+
+
+
+/* 
+
+Need Help
+
+*/
