@@ -1423,8 +1423,8 @@ Trusted Crypto Exchange
         display:block;
     }
     .trade__content--image > img{
-        max-width:134rem;
-        max-height:270.4rem;
+        max-width:40rem;
+        max-height:60rem;
     }
     .trade__content--download__apps--app:nth-child(4),
     .trade__content--download__apps--app:nth-child(5),
@@ -1555,3 +1555,78 @@ Trusted Crypto Exchange
 Need Help
 
 */
+
+.help__title{
+    margin:5rem 0;
+}
+@media screen and (max-width:768px){
+    .help__title{
+        margin-top:0;
+    } 
+}
+.help__content{
+    display:flex;
+    justify-content:space-between;
+}
+@media screen and (max-width:1024px){
+    .help__content{
+        flex-wrap:wrap;
+    }
+}
+.help__content--card {
+    display:flex;
+    column-gap: 2rem;
+    width:100%;
+    max-width: 38rem;
+    padding:1.6rem;
+}
+@media screen and (max-width:425px){
+    .help__content--card{
+        padding:1.6rem 0;
+    }
+}
+@media screen and (max-width:1024px){
+    .help__content--card {
+        display:block;
+    }
+}
+.help__content--card img{
+    height:64px;
+    width:64px;
+}
+.help__content--card__content h1{
+    font-size:2rem;
+    font-weight:500;
+    font-family:var(--secondary-font)
+}
+.help__content--card__content > div{
+    padding:1rem 0;
+    color:400;
+    font-size:1.3rem;
+    color:#474D57;
+}
+.help__content--card__content p{
+    color:#C99400;
+    font-size:1.4rem;
+    padding-top:1rem;
+}
+
+
+/* 
+
+Start Earning Today
+
+*/
+
+.earn{
+    background:#FAFAFA;
+    padding:6rem 0;
+}
+.earn > div{
+    display:grid;
+    place-items:center;
+}
+
+.earn h1{
+    margin-bottom:4rem;
+}
