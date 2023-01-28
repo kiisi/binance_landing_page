@@ -1,5 +1,26 @@
-const footerTitle = document.querySelectorAll(".footer__links--title")
+/* Mobile banner cancel */
 
+let mobileBanner = document.querySelector(".mobile-banner")
+let mobileBannerCancelBtn = document.querySelector(".mobile-banner__sub--cancel")
+
+mobileBannerCancelBtn.addEventListener("click",()=>{
+    mobileBanner.style.display = "none"
+})
+
+
+/* Banner cancel */
+
+let banner = document.querySelector(".banner")
+let bannerCancelBtn = document.querySelector(".banner__content--btn__cancel")
+
+bannerCancelBtn.addEventListener("click",()=>{
+    banner.style.display = "none"
+})
+
+
+/* Footer Accordion */
+
+const footerTitle = document.querySelectorAll(".footer__links--title")
 footerTitle.forEach(title =>{
 
     let footerLinks = title.nextElementSibling
