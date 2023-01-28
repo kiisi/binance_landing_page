@@ -1657,6 +1657,16 @@ Binance Footer
     font-size:1.9rem;
     font-weight:500;
     padding-bottom:1rem;
+    display:flex;
+    justify-content: space-between;
+}
+.footer__links h1 span{
+    display:none;
+}
+@media screen and (max-width:768px){
+    .footer__links h1 span{
+        display:block;
+    }
 }
 .footer__links--link p{
     font-size:1.4rem;
@@ -1692,4 +1702,20 @@ Binance Footer
         flex-direction:column;
         row-gap:2rem;
     } 
+}
+
+/* 
+
+Binance Copyright Text
+
+*/
+.copyright{
+    margin-top: 2.5rem;
+}
+.copyright__text{
+    border-top:1px solid #EAECEF;
+    text-align:center;
+    padding:2rem 0;
+    color:#707A8A;
+    font-size:1.4rem;
 }
