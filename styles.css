@@ -1642,6 +1642,7 @@ Binance Footer
     display:grid;
     grid-template-columns: 1fr 1fr 1fr 2fr 1.1fr;
     column-gap:1rem;
+    cursor:pointer;
 }
 @media screen and (max-width:1024px){
     .footer{
@@ -1655,7 +1656,7 @@ Binance Footer
 .footer__links h1{
     color:#1E2329;
     font-size:1.9rem;
-    font-weight:500;
+    font-weight:600;
     padding-bottom:1rem;
     display:flex;
     justify-content: space-between;
@@ -1664,8 +1665,18 @@ Binance Footer
     display:none;
 }
 @media screen and (max-width:768px){
+    .footer__links h1{
+        font-size:1.6rem;
+    }
     .footer__links h1 span{
         display:block;
+    }
+    .footer__links--link{
+        transition: 250ms ease-in;
+        overflow:hidden;
+    }
+    .footer__links--link:not(.effect){
+        display:none;
     }
 }
 .footer__links--link p{
