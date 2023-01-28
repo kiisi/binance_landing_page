@@ -13,13 +13,17 @@ footerTitle.forEach(title =>{
 
             let footerLinksHeight = footerLinks.clientHeight + 'px'
 
+
+
+
+            console.log("open")
             
         }else{
             let footerLinksHeight = footerLinks.clientHeight + 'px'
             pointer.textContent = "add"
             footerLinks.classList.remove("effect")
 
-            
+            console.log("close")
         }
     }
 })
