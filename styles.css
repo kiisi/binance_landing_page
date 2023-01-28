@@ -1675,6 +1675,7 @@ Binance Footer
     .footer__links--link{
         transition: 250ms ease-in;
         overflow:hidden;
+        height:auto;
     }
     .footer__links--link:not(.effect){
         display:none;
@@ -1714,6 +1715,21 @@ Binance Footer
         flex-direction:column;
         row-gap:2rem;
     } 
+}
+
+.desktop-footer{
+    display: block;
+}
+.mobile-footer{
+    display:none;
+}
+@media screen and (max-width:768px){
+    .desktop-footer{
+        display: none;
+    }    
+    .mobile-footer{
+        display:block;
+    }
 }
 
 /* 

@@ -12,18 +12,19 @@ footerTitle.forEach(title =>{
             footerLinks.style.height = "auto"
 
             let footerLinksHeight = footerLinks.clientHeight + 'px'
+            footerLinks.style.height = '0px'
+            setTimeout(()=>{
+                footerLinks.style.height = footerLinksHeight
+            },0)
 
-
-
-
-            console.log("open")
             
         }else{
-            let footerLinksHeight = footerLinks.clientHeight + 'px'
             pointer.textContent = "add"
-            footerLinks.classList.remove("effect")
+            footerLinks.style.height = '0px'
+            footerLinks.addEventListener("transitionend",()=>{
+                footerLinks.classList.remove("effect")
+            },{once: true})
 
-            console.log("close")
         }
     }
 })
