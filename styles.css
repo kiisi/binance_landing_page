@@ -402,7 +402,6 @@ html{
     color:#707A8A;
 }
 .navigation__mega-menu--item__arrow{
-    /* margin-left: auto; */
     color:#F0b90b;
     opacity:0;
     transition: 400ms ease;
@@ -487,6 +486,154 @@ html{
 }
 
 
+/* 
+
+Mobile Navigation
+
+*/
+
+.mobile-navigation{
+    width:100%;
+    max-width:37.5rem;
+    height:100%;
+    position:fixed;
+    top:0;
+    right:-37.5rem;
+    z-index:99999999;
+    background:#fff;
+    display:none;
+    transition:200ms ease-in-out;
+}
+
+@media screen and (max-width:1300px){
+    .mobile-navigation{
+        display:block;
+    }
+    .mobile-navigation.show{
+        right:0;
+    }
+}
+
+.mobile-navigation__cancel{
+    padding:1.6rem;
+    display:flex;
+    justify-content: right;
+    align-items: center;
+    color:rgb(112, 122, 138);
+}
+.mobile-navigation__cancel span{
+    font-size:2.8rem;
+    font-weight:bold;
+    cursor:pointer;
+}
+.mobile-navigation__auth{
+    padding:1.6rem;
+    display:none;
+}
+@media screen and (max-width:1160px){
+    .mobile-navigation__auth{
+        display:block;
+    }
+}
+.mobile-navigation__auth-btn{
+    font-size:1.4rem;
+    display:grid;
+    place-items:center;
+    color:rgb(30, 35, 41);
+    text-overflow:ellipsis;
+    white-space: nowrap;
+    overflow:hidden;
+}
+.mobile-navigation__auth-btn--register{
+    margin-top:2rem;
+    background:rgb(252,213,53);
+    padding:10px 12px;
+    border-radius: 4px;
+}
+.mobile-navigation__auth-btn--register > div{
+    display: flex;
+    align-items: center;
+}
+.mobile-navigation__auth-btn--register > div > svg{
+    margin-right:2px;
+    height:1.6rem;
+    width:1.6rem;
+}
+.mobile-navigation__settings--item{
+    padding:1.6rem;
+    display:flex;
+    justify-content:space-between;
+    cursor:pointer;
+}
+.mobile-navigation__settings--item:hover{
+    background-color: rgb(245, 245, 245);
+}
+.mobile-navigation__settings--item:hover .mobile-navigation__settings--item__leading > svg{
+    color: var(--yellow-light-hover);
+}
+.mobile-navigation__settings--item__leading{
+    display:flex;
+    align-items:center;
+    column-gap: 8px;
+    font-size:1.6rem;
+    color:rgb(30, 35, 41);
+}
+.mobile-navigation__settings--item__leading > svg {
+    color:rgb(112, 122, 138);
+}
+.mobile-navigation__settings--item__theme-btn{
+    background:rgb(234, 236, 239);
+    border-radius:999rem;
+    width:4rem;
+    height:2.4rem;
+    margin:0;
+    padding:0;
+    border:none;
+    box-sizing: border-box;
+}
+.mobile-navigation__settings--item__theme-btn > div{
+    margin:0 3px;
+    width:1.8rem;
+    height:1.8rem;
+    cursor:pointer;
+    border-radius:999rem;
+    transition: 200ms ease-in-out;
+    background-color: rgb(255, 255, 255);
+    padding:2px;
+    box-shadow: rgb(20 21 26 / 4%) 0px 1px 2px, rgb(71 77 87 / 4%) 0px 3px 6px, rgb(20 21 26 / 10%) 0px 0px 1px;
+}
+.mobile-navigation__settings--item__theme-btn > div > svg{
+    height:100%;
+    width:100%;
+    color: var(--yellow-light-hover);
+}
+.mobile-navigation__settings--item__theme-btn > div.active{
+    transform:translateX(1.6rem);
+}
+
+@media screen and (max-width:1080px){
+
+}
+
+/* 
+
+Mobile Navigation Dropback
+
+*/
+
+.mobile-navigation-backdrop{
+    background:rgba(0, 0, 0, 0.1);
+    height:100%;
+    width:100%;
+    position:fixed;
+    top:0;
+    left:0;
+    z-index:88888888;
+    display:none;
+}
+.mobile-navigation-backdrop.show{
+    display:block;
+}
 
 /* Redeem Gift */
 
@@ -584,6 +731,7 @@ html{
 .header__main--content__btn > div{
     display:flex;
     align-items: center;
+    text-align:center;
 }
 .header__main--content__btn > div > span{
     margin-right: 5px;
@@ -1501,6 +1649,13 @@ Trusted Crypto Exchange
     display:grid;
     grid-template-columns: repeat(3, 1fr);
     margin-top:5rem;
+}
+@media screen and (max-width:320px){
+    .trade__content--download__apps{
+        display:flex;
+        justify-content: space-around;
+        flex-wrap:wrap;
+    }
 }
 .trade__content--download__apps--app > div{
     display:grid;
