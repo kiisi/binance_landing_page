@@ -74,20 +74,28 @@ themeBtnBox.addEventListener("click", ()=>{
 
 let hamburgerMenu = document.querySelector(".navigation__sub--menu");
 let mobileNavigation = document.querySelector(".mobile-navigation")
-let mobileNavigationCancel = document.querySelector(".mobile-navigation__cancel")
+let mobileNavigationCancel = document.querySelector(".mobile-navigation__cancel span")
 let mobileNavigationBackdrop = document.querySelector(".mobile-navigation-backdrop")
 
 
 hamburgerMenu.addEventListener("click",()=>{
     mobileNavigation.classList.add("show")
     mobileNavigationBackdrop.classList.add("show")
+
+    document.querySelector("body").style.overflowY = "hidden"
 })
 mobileNavigationCancel.addEventListener("click",()=>{
     mobileNavigation.classList.remove("show")
-
     mobileNavigationBackdrop.classList.remove("show")
-    
-    
+
+    document.querySelector("body").style.overflowY = "auto"
 })
 
 /* Mobile Navigation Dropback */
+
+mobileNavigationBackdrop.addEventListener('click', ()=>{
+    mobileNavigation.classList.remove("show")
+    mobileNavigationBackdrop.classList.remove("show")
+
+    document.querySelector("body").style.overflowY = "auto"
+})

@@ -503,6 +503,7 @@ Mobile Navigation
     background:#fff;
     display:none;
     transition:200ms ease-in-out;
+    overflow: auto;
 }
 
 @media screen and (max-width:1300px){
@@ -614,6 +615,34 @@ Mobile Navigation
 @media screen and (max-width:1080px){
 
 }
+
+.mobile-navigation__main--item{
+    padding:1.6rem;
+    cursor:pointer;
+}
+.mobile-navigation__main--item:last-child{
+    border-bottom:1px solid #ddd;
+}
+.mobile-navigation__main--item__title{
+    display:flex;
+    justify-content:space-between;
+    align-items: center;
+}
+.mobile-navigation__main--item__title--leading{
+    display: flex;
+    align-items: center;
+    column-gap: 8px;
+    font-size: 1.6rem;
+    color: rgb(30, 35, 41);
+}
+.mobile-navigation__main--item__title--trailing{
+    display:grid;
+    place-items:center;
+}
+.mobile-navigation__main--item__title--leading svg{
+    color:rgb(112, 122, 138);
+}
+
 
 /* 
 
