@@ -86,10 +86,7 @@ hamburgerMenu.addEventListener("click",()=>{
 })
 mobileNavigationCancel.addEventListener("click",()=>{
     mobileNavigation.classList.remove("show")
-    mobileNavigation.addEventListener("transitionend", ()=>{
-        mobileNavigationBackdrop.classList.remove("show")
-    })
-    
+    mobileNavigationBackdrop.classList.remove("show")
 
     document.querySelector("body").style.overflowY = "auto"
 })
@@ -101,4 +98,35 @@ mobileNavigationBackdrop.addEventListener('click', ()=>{
     mobileNavigationBackdrop.classList.remove("show")
 
     document.querySelector("body").style.overflowY = "auto"
+})
+
+
+/* Mobile Navigation Accordion */
+
+const mobileNavigationTitle = document.querySelectorAll(".mobile-navigation__main--item__title")
+mobileNavigationTitle.forEach(title =>{
+
+    if(title.nextElementSibling){
+        let titleContent = title.nextElementSibling
+
+        title.onclick = () =>{   
+            if(!titleContent.classList.contains("effect")){
+                titleContent.classList.add("effect")
+                titleContent.style.height = 'auto';
+
+                let titleContentHeight = titleContent.clientHeight + 'px'
+                titleContent.style.height = '0px';
+                setTimeout(()=>{
+                    titleContent.style.height = titleContentHeight
+                },0)
+            }else{
+                titleContent.style.height = '0px';
+                titleContent.addEventListener("transitionend",()=>{
+                    titleContent.classList.remove("effect")
+                },{once: true})
+            }
+        }
+    }
+    
+    
 })

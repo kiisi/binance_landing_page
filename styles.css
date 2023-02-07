@@ -655,7 +655,13 @@ Mobile Navigation
 .mobile-navigation__main--item__body--item:first-child{
     padding-top:32px;
 }
-
+.mobile-navigation__main--item__body{
+    overflow:hidden;
+    transition:height 250ms ease;
+}
+.mobile-navigation__main--item__body:not(.effect){
+    display:none;
+}
 
 /* 
 
@@ -719,6 +725,9 @@ Mobile Navigation Dropback
     padding-top:8rem;
     padding-bottom:4rem;
     background-image: url("./assets/images/web-background-image.png");
+    background-size:cover;
+    background-position:35% center;
+    background-repeat:no-repeat;
 }
 .header__main{
     display:flex;
