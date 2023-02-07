@@ -86,7 +86,10 @@ hamburgerMenu.addEventListener("click",()=>{
 })
 mobileNavigationCancel.addEventListener("click",()=>{
     mobileNavigation.classList.remove("show")
-    mobileNavigationBackdrop.classList.remove("show")
+    mobileNavigation.addEventListener("transitionend", ()=>{
+        mobileNavigationBackdrop.classList.remove("show")
+    })
+    
 
     document.querySelector("body").style.overflowY = "auto"
 })
