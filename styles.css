@@ -664,6 +664,12 @@ Mobile Navigation Dropback
     display:block;
 }
 
+@media screen and (min-width:1300px){
+    .mobile-navigation-backdrop.show{
+        display:none;
+    }
+}
+
 /* Redeem Gift */
 
 .redeem-gift{
