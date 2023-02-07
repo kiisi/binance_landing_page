@@ -105,10 +105,8 @@ mobileNavigationBackdrop.addEventListener('click', ()=>{
 
 const mobileNavigationTitle = document.querySelectorAll(".mobile-navigation__main--item__title")
 mobileNavigationTitle.forEach(title =>{
-
     if(title.nextElementSibling){
         let titleContent = title.nextElementSibling
-
         title.onclick = () =>{   
             if(!titleContent.classList.contains("effect")){
                 titleContent.classList.add("effect")
@@ -127,6 +125,4 @@ mobileNavigationTitle.forEach(title =>{
             }
         }
     }
-    
-    
 })
