@@ -490,7 +490,7 @@ Mobile Navigation
     z-index:99999999;
     background:#fff;
     display:none;
-    transition:250ms ease-in-out;
+    transition:400ms ease-in-out;
     overflow: auto;
 }
 
