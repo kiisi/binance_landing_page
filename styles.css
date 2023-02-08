@@ -882,51 +882,6 @@ Mobile Navigation Dropback
 }
 
 
-
-/*   
-
-Binance Academy
-
-*/
-
-.binance-academy{
-    border-top-left-radius: 2.5rem;
-    border-top-right-radius: 2.5rem;
-    background:#fff;
-    padding-top: 3.2rem;
-}
-.binance-academy__image{
-    width:100%;
-    border-radius: 2rem;
-    height:30rem;
-    background:url("./assets/images/desktop-en.png");
-    background-repeat: no-repeat;
-    background-position: left;
-    background-size: cover;
-}
-@media screen and (max-width:1024px){
-    .binance-academy__image{
-        height:24rem;
-    }
-}
-@media screen and (max-width:768px){
-    .binance-academy__image{
-        background-size: contain;
-        border-radius:0;
-    }
-}
-@media screen and (max-width:600px){
-    .binance-academy__image{
-        height:12rem;
-    }
-}
-@media screen and (max-width:425px){
-    .binance-academy__image{
-        height:10rem;
-    }
-}
-
-
 /* Popular Cryptocurrencies  */
 
 .popular-cryptocurrencies__title{
