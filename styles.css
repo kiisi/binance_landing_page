@@ -600,10 +600,14 @@ Mobile Navigation
     transform:translateX(1.6rem);
 }
 
-@media screen and (max-width:1080px){
-
+.mobile-navigation__main{
+    display:none;
 }
-
+@media screen and (max-width:1080px){
+    .mobile-navigation__main{
+        display:block;
+    }
+}
 .mobile-navigation__main--item{
     padding:1.6rem;
     cursor:pointer;
