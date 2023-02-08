@@ -7,7 +7,6 @@ mobileBannerCancelBtn.addEventListener("click",()=>{
     mobileBanner.style.display = "none"
 })
 
-
 /* Banner cancel */
 
 let banner = document.querySelector(".banner")
@@ -107,10 +106,12 @@ const mobileNavigationTitle = document.querySelectorAll(".mobile-navigation__mai
 mobileNavigationTitle.forEach(title =>{
     if(title.nextElementSibling){
         let titleContent = title.nextElementSibling
+        let arrow = title.children.item(1)
         title.onclick = () =>{   
             if(!titleContent.classList.contains("effect")){
                 titleContent.classList.add("effect")
                 titleContent.style.height = 'auto';
+                arrow.style.transform = 'rotate(-180deg)';
 
                 let titleContentHeight = titleContent.clientHeight + 'px'
                 titleContent.style.height = '0px';
@@ -118,6 +119,7 @@ mobileNavigationTitle.forEach(title =>{
                     titleContent.style.height = titleContentHeight
                 },0)
             }else{
+                arrow.style.transform = 'rotate(0deg)';
                 titleContent.style.height = '0px';
                 titleContent.addEventListener("transitionend",()=>{
                     titleContent.classList.remove("effect")
@@ -126,3 +128,4 @@ mobileNavigationTitle.forEach(title =>{
         }
     }
 })
+

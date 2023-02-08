@@ -385,18 +385,6 @@ html{
     color:#1E2329;
     padding-bottom: 2px;
 }
-.navigation__mega-menu--item__content h2 span{
-    border:1px solid #aaa;
-    width:16px;
-    height:16px;
-    display:inline-flex;
-    border-radius: 50%;
-    justify-content: center;
-    align-items: center;
-    margin-left:2px;
-    margin-right: 2px;
-    font-size:1.2rem;
-}
 .navigation__mega-menu--item__content p{
     font-size:1.3rem;
     color:#707A8A;
@@ -638,6 +626,7 @@ Mobile Navigation
 .mobile-navigation__main--item__title--trailing{
     display:grid;
     place-items:center;
+    transition:250ms ease;
 }
 .mobile-navigation__main--item__title--leading svg{
     color:rgb(112, 122, 138);
@@ -661,6 +650,9 @@ Mobile Navigation
 }
 .mobile-navigation__main--item__body:not(.effect){
     display:none;
+}
+.mobile-navigation__main--item__title:hover svg{
+    color:var(--yellow-light-hover);
 }
 
 /* 
