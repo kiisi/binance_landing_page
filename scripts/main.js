@@ -129,3 +129,15 @@ mobileNavigationTitle.forEach(title =>{
     }
 })
 
+
+/* Dark-Light Theme */
+
+let themeColorBtn = document.querySelector(".navigation__sub--settings__theme")
+
+themeColorBtn.addEventListener("click", ()=>{
+    if(themeColorBtn.textContent === "dark_mode"){
+        themeColorBtn.textContent = "light_mode"
+    }else{
+        themeColorBtn.textContent = "dark_mode"
+    }
+})
