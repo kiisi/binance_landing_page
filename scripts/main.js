@@ -145,34 +145,11 @@ themeColorBtn.addEventListener("click", ()=>{
 })
 
 function darkMode(){
-    document.querySelector(".navigation").classList.add("theme-bg-nav")
-    document.querySelectorAll(".navigation__main--item span").forEach(e =>{
-        e.classList.add("theme-text")
-    })
-    document.querySelectorAll(".navigation__sub--theme-color").forEach(e=>{
-        e.classList.add("theme-text")
-    })
-    document.querySelector(".redeem-gift").classList.add("theme-bg-brown")
-    document.querySelector(".redeem-gift__content--main").classList.add("theme-text")
-    document.querySelector(".header").classList.add('theme-bg-black')
-    document.querySelectorAll(".header--text").forEach(e=>{
-        e.classList.add("theme-text")
-    })
+    document.querySelector("body").classList.add("dark-mode--theme")
     
 }
 
 function lightMode(){
-    document.querySelector(".navigation").classList.remove("theme-bg-nav")
-    document.querySelectorAll(".navigation__main--item span").forEach(e =>{
-        e.classList.remove("theme-text")
-    })
-    document.querySelectorAll(".navigation__sub--theme-color").forEach(e=>{
-        e.classList.remove("theme-text")
-    })
-    document.querySelector(".redeem-gift").classList.remove("theme-bg-brown")
-    document.querySelector(".redeem-gift__content--main").classList.remove("theme-text")
-    document.querySelector(".header").classList.add('theme-bg-black')
-    document.querySelectorAll(".header--text").forEach(e=>{
-        e.classList.remove("theme-text")
-    })
+    document.querySelector("body").classList.remove("dark-mode--theme")
+    
 }

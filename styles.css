@@ -16,6 +16,45 @@ html{
 
 /* Dark-light theme colors */
 
+.dark-mode--theme{
+    background:rgb(11, 14, 17);
+}
+
+.dark-mode--theme .navigation{
+    background:#181A20;
+}
+
+.dark-mode--theme .theme--text{
+    color:rgb(234, 236, 239);
+}
+
+.dark-mode--theme .navigation__main--item span{
+    color:rgb(234, 236, 239);
+}
+
+.dark-mode--theme .header{
+    background:rgb(11, 14, 17);
+}
+.dark-mode--theme .redeem-gift{
+    background:rgb(60, 38, 1);
+}
+
+.dark-mode--theme .popular-cryptocurrencies{
+    background:#181A20;
+}
+
+.dark-mode--theme .popular-cryptocurrencies__content--item__data:hover{
+    background:#2B3139;
+}
+
+.dark-mode--theme .trade-bitcoin{
+    background:#181A20;
+}
+
+.dark-mode--theme .trade-bitcoin .max-wrapper__content{
+    background:#281A00;
+}
+
 .theme-bg-black{
     background:rgb(11, 14, 17);
 }
@@ -904,6 +943,11 @@ Mobile Navigation Dropback
 
 
 /* Popular Cryptocurrencies  */
+
+.popular-cryptocurrencies{
+    border-top-left-radius: 24px;
+    border-top-right-radius: 24px;
+}
 
 .popular-cryptocurrencies__title{
     display:flex;
