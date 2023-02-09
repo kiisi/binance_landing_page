@@ -28,6 +28,10 @@ html{
     color:rgb(234, 236, 239);
 }
 
+.dark-mode--theme .theme--text-light{
+    color:#B7BDC6;
+}
+
 .dark-mode--theme .navigation__main--item span{
     color:rgb(234, 236, 239);
 }
@@ -55,6 +59,38 @@ html{
     background:#281A00;
 }
 
+.dark-mode--theme .crypto-portfolio{
+    background:#181A20;
+}
+
+.dark-mode--theme .daily-rewards{
+    background:#181A20;
+}
+
+.dark-mode--theme .daily-rewards__content--card{
+    background:rgb(43, 49, 57);
+}
+
+.dark-mode--theme .daily-rewards__content--card:hover{
+    background:rgb(24, 26, 32);
+}
+
+.dark-mode--theme .daily-rewards__content--card:hover{
+    background:rgb(24, 26, 32);
+}
+
+.dark-mode--theme .daily-rewards__content--card:hover .daily-rewards__content--card__footer--trailing{
+    background:rgb(252, 213, 53);
+}
+
+.dark-mode--theme .daily-rewards__content--card .daily-rewards__content--card__footer--trailing{
+    background:rgb(30, 35, 41);
+}
+
+.dark-mode--theme .daily-rewards__content--card:hover .daily-rewards__content--card__footer--trailing svg{
+    color:rgb(11, 14, 17);
+}
+
 .theme-bg-black{
     background:rgb(11, 14, 17);
 }
@@ -67,9 +103,7 @@ html{
 .theme-text{
     color:rgb(234, 236, 239) !important;
 }
-.theme-text-light{
-    color:rgb(132, 142, 156);
-}
+
 
 
 /* Font families */
