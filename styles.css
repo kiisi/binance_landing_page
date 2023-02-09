@@ -24,6 +24,13 @@ html{
     background:#181A20;
 }
 
+.dark-mode--theme .navigation__mega-menu{
+    background:#1E2329;
+}
+.dark-mode--theme .navigation__mega-menu--item:hover{
+    background:#2B3139;
+}
+
 .dark-mode--theme .theme--text{
     color:rgb(234, 236, 239);
 }
@@ -451,7 +458,7 @@ html{
     border-radius: 1rem;
     display:flex;
     align-items: center;
-    background:#fff;
+    background:transparent;
     width: 100%;
 }
 .navigation__mega-menu--item:hover{
