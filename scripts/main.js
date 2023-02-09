@@ -146,11 +146,13 @@ themeColorBtn.addEventListener("click", ()=>{
 
 function darkMode(){
     document.querySelector("body").classList.add("dark-mode--theme")
+    document.querySelector(".header__main--image img").src = './assets/images/foreground-image-dark.png'
     
 }
 
 function lightMode(){
     document.querySelector("body").classList.remove("dark-mode--theme")
+    document.querySelector(".header__main--image img").src = './assets/images/foreground-image-light.png'
     
 }
 
