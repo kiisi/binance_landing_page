@@ -19,9 +19,14 @@ html{
 .theme-bg-black{
     background:rgb(11, 14, 17);
 }
-
+.theme-bg-brown{
+    background:rgb(60, 38, 1) !important;
+}
+.theme-bg-nav{
+    background:#181A20;
+}
 .theme-text{
-    color:rgb(234, 236, 239);
+    color:rgb(234, 236, 239) !important;
 }
 .theme-text-light{
     color:rgb(132, 142, 156);
@@ -260,7 +265,7 @@ html{
     margin-right: 1.2rem;
 }
 .navigation__main--item:hover > span{
-    color:var(--yellow-dark-hover);
+    color:var(--yellow-light-hover);
 }
 .navigation__main--item:hover .navigation__main--item__apps{
     color:var(--yellow-light-hover);
@@ -291,7 +296,6 @@ html{
     display:flex;
     align-items: center;
     padding:6px 12px;
-    background:rgb(252,213,53);
     color:rgb(24,26,32);
     border-radius: 4px;
     font-size:1.4rem;
@@ -302,11 +306,11 @@ html{
     width:1.6rem;
     margin-right: 8px;
 }
-.navigation__sub--auth__btn--login{
-    background: #fff;
-}
 .navigation__sub--auth__btn--login:hover{
     color:var(--yellow-light-hover);
+}
+.navigation__sub--auth__btn--register{
+    background:rgb(252,213,53);
 }
 @media screen and (max-width:1160px){
     .navigation__sub--auth__btn--login{
@@ -484,7 +488,7 @@ html{
 /* ---- Header mega menu institutional hover link up ---- */
 
 .navigation__mega-menu--institutional{
-    right:47rem;
+    right:25rem;
 }
 .navigation__main--item--institutional-hov:hover .navigation__mega-menu--institutional{
     display:flex;
@@ -808,7 +812,7 @@ Mobile Navigation Dropback
 }
 .header__main--content__continue{
     padding:2rem 0;
-    background:#fff;
+    background:transparent;
     display:grid;
     place-items:center;
     font-size:1.6rem;
@@ -868,6 +872,7 @@ Mobile Navigation Dropback
     grid-template-columns: repeat(4, 1fr);
     font-family: var(--secondary-font);
     column-gap: 2rem;
+    color:rgb(30, 35, 41);
 }
 @media screen and (max-width:1024px){
     .header__stats{
@@ -879,12 +884,11 @@ Mobile Navigation Dropback
 }
 .header__stats--stat h1{
     font-size: 4rem;
-    color:rgb(30, 35, 41);
+    
 }
 .header__stats--stat p{
     padding-top: 4px;
     font-size: 1.6rem;
-    color:rgb(30, 35, 41);
 }
 @media screen and (max-width:768px){
     .header__stats--stat h1{
