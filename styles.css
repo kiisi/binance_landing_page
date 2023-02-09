@@ -410,7 +410,7 @@ html{
 .navigation__sub--settings__theme{
     font-size: 1.8rem;
 }
-.navigation__sub--settings__theme:hover{
+.navigation__sub--settings--item:hover{
     color:var(--yellow-light-hover);
 }
 @media screen and (max-width:1300px){

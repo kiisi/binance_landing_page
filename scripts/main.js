@@ -153,3 +153,9 @@ function lightMode(){
     document.querySelector("body").classList.remove("dark-mode--theme")
     
 }
+
+
+// Rendering Copy write year
+
+let date = new Date()
+document.querySelector(".copyright__text span").textContent = date.getFullYear()
