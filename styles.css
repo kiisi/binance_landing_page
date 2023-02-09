@@ -44,7 +44,7 @@ html{
 }
 
 .dark-mode--theme .header{
-    background:rgb(11, 14, 17);
+    background-color:rgb(11, 14, 17);
 }
 .dark-mode--theme .redeem-gift{
     background:rgb(60, 38, 1);
