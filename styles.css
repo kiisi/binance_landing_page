@@ -43,28 +43,15 @@ html{
     background:rgb(60, 38, 1);
 }
 
-.dark-mode--theme .popular-cryptocurrencies{
+.dark-mode--theme .dark-mode-background{
     background:#181A20;
 }
-
 .dark-mode--theme .popular-cryptocurrencies__content--item__data:hover{
     background:#2B3139;
 }
 
-.dark-mode--theme .trade-bitcoin{
-    background:#181A20;
-}
-
 .dark-mode--theme .trade-bitcoin .max-wrapper__content{
     background:#281A00;
-}
-
-.dark-mode--theme .crypto-portfolio{
-    background:#181A20;
-}
-
-.dark-mode--theme .daily-rewards{
-    background:#181A20;
 }
 
 .dark-mode--theme .daily-rewards__content--card{
@@ -91,20 +78,29 @@ html{
     color:rgb(11, 14, 17);
 }
 
-.theme-bg-black{
-    background:rgb(11, 14, 17);
-}
-.theme-bg-brown{
-    background:rgb(60, 38, 1) !important;
-}
-.theme-bg-nav{
-    background:#181A20;
-}
-.theme-text{
-    color:rgb(234, 236, 239) !important;
+.dark-mode--theme .explore__content--card{
+    background:#0B0E11;
 }
 
+.dark-mode--theme .trade__content--download__apps--app > div:hover{
+    background:#2B3139;
+}
 
+.dark-mode--theme .trade__content--download__apps--app > div svg{
+    color:#EAECEF;
+}
+
+.dark-mode--theme .trade__content--download__apps--app > div p{
+    color:#EAECEF;
+}
+
+.dark-mode--theme .trade__content--download__scan{
+    background:#0B0E11;
+}
+
+.dark-mode--theme .earn{
+    background:#0B0E11;
+}
 
 /* Font families */
 
@@ -1820,6 +1816,9 @@ Need Help
 
 */
 
+.help{
+    padding-bottom:10rem;
+}
 .help__title{
     margin:5rem 0;
 }
@@ -1884,7 +1883,7 @@ Start Earning Today
 
 .earn{
     background:#FAFAFA;
-    padding:6rem 0;
+    padding:8rem 0;
 }
 .earn > div{
     display:grid;
@@ -1906,6 +1905,7 @@ Binance Footer
     grid-template-columns: 1fr 1fr 1fr 2fr 1.1fr;
     column-gap:1rem;
     cursor:pointer;
+    padding-top:5rem;
 }
 @media screen and (max-width:1024px){
     .footer{
@@ -1943,10 +1943,12 @@ Binance Footer
         display:none;
     }
 }
+.footer__links--link{
+    color:#707A8A;
+}
 .footer__links--link p{
     font-size:1.4rem;
     padding-bottom:8px;
-    color:#707A8A;
 }
 .footer__links--double{
     display:flex;
@@ -1962,10 +1964,10 @@ Binance Footer
     display:flex;
     flex-wrap:wrap;
     padding-top:8px;
+    color:#707A8A;
 }
 .footer__links--community > div{
     font-size:18px;
-    color:#707A8A;
     margin-right:3.2rem;
     margin-bottom:2.4rem;
     width:2.5rem;
@@ -2000,7 +2002,7 @@ Binance Copyright Text
 
 */
 .copyright{
-    margin-top: 2.5rem;
+    padding-top: 2.5rem;
 }
 .copyright__text{
     border-top:1px solid #EAECEF;
