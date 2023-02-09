@@ -109,6 +109,15 @@ html{
     background:#0B0E11;
 }
 
+.dark-mode--theme .header__main--content__auth-btn--btn{
+    background:#474D57;
+    color:#EAECEF;
+}
+
+.dark-mode--theme .header__main--content__auth-btn--btn svg{
+    fill:#EAECEF;
+}
+
 /* Font families */
 
 :root{
@@ -914,8 +923,9 @@ Mobile Navigation Dropback
     display:flex;
     align-items: center;
 }
-.header__main--content__auth-btn--btn > div > img{
+.header__main--content__auth-btn--btn > div > img, .header__main--content__auth-btn--btn > div > svg{
     margin-right:8px;
+    fill:#1e2329;
 }
 .header__main--image{
     flex:1;
