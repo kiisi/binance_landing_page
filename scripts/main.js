@@ -16,9 +16,7 @@ bannerCancelBtn.addEventListener("click",()=>{
     banner.style.display = "none"
 })
 
-
-
-// System Theme
+// Persist App Theme
 
 function persistAppTheme(apptheme){
     if(localStorage.getItem('theme')){
@@ -40,8 +38,6 @@ function persistAppTheme(apptheme){
 }
 
 persistAppTheme()
-
-
 
 /* Theme Data */
 
