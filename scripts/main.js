@@ -38,16 +38,16 @@ let mobileThemeBtnSvgDarkMode = `<svg xmlns:xlink="http://www.w3.org/1999/xlink"
 let themeBtnCurrentState = false
 mobileThemeBtnBox.addEventListener("click", ()=>{
     if(themeBtnCurrentState){
+        lightMode()
         mobileThemeBtnBox.setAttribute('aria-mobile-theme-btn', 'false')
         themeBtnCurrentState = false;
         mobileThemeBtn.innerHTML = mobileThemeBtnSvgLightMode
-        lightMode()
         
     }else{
+        darkMode()
         mobileThemeBtnBox.setAttribute('aria-mobile-theme-btn', 'true')
         themeBtnCurrentState = true;
         mobileThemeBtn.innerHTML = mobileThemeBtnSvgDarkMode
-        darkMode()
     }
 })
 
