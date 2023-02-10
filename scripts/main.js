@@ -22,9 +22,9 @@ bannerCancelBtn.addEventListener("click",()=>{
 
 const OS_darkTheme = window.matchMedia("(prefers-color-scheme: dark)");
 
-if(OS_darkTheme.matches){
-    darkMode()
-}
+// if(OS_darkTheme.matches){
+//     darkMode()
+// }
 
 /* Theme Data */
 
