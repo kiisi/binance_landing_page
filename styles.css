@@ -149,6 +149,13 @@ html{
     background-color:rgb(43, 49, 57);
 }
 
+.green--text-color{
+    color:rgb(3, 166, 109);
+}
+.red--text-color{
+    color:rgb(207, 48, 74);
+}
+
 /* Font families */
 
 :root{
