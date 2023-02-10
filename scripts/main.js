@@ -24,6 +24,8 @@ const OS_darkTheme = window.matchMedia("(prefers-color-scheme: dark)");
 
 if(OS_darkTheme.matches){
     darkMode()
+}else{
+    lightMode()
 }
 
 /* Theme Data */
