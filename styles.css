@@ -717,6 +717,10 @@ Mobile Navigation
 .mobile-navigation__settings--item__leading > svg {
     color:rgb(112, 122, 138);
 }
+[aria-mobile-theme-btn='true'] .mobile-navigation__settings--item__theme-btn > div{
+    transform:translateX(1.6rem);
+}
+
 .mobile-navigation__settings--item__theme-btn{
     background:rgb(234, 236, 239);
     border-radius:999rem;
@@ -745,9 +749,9 @@ Mobile Navigation
     /* color:rgb(132, 142, 156); */
     
 }
-.mobile-navigation__settings--item__theme-btn > div.active{
+/* .mobile-navigation__settings--item__theme-btn > div.active{
     transform:translateX(1.6rem);
-}
+} */
 
 .mobile-navigation__main{
     display:none;
