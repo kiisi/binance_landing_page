@@ -20,13 +20,28 @@ bannerCancelBtn.addEventListener("click",()=>{
 
 // System Theme
 
-const OS_darkTheme = window.matchMedia("(prefers-color-scheme: dark)");
-
-if(OS_darkTheme.matches){
-    darkMode()
-}else{
-    lightMode()
+function persistAppTheme(apptheme){
+    if(localStorage.getItem('theme')){
+        if(localStorage.getItem('theme') === 'dark'){
+            darkMode()
+        }else{
+            lightMode()
+        }
+    }else{
+        const OS_darkTheme = window.matchMedia("(prefers-color-scheme: dark)");
+        if(OS_darkTheme.matches){
+            localStorage.setItem('theme', 'dark')
+            darkMode()
+        }else{
+            localStorage.setItem('theme', 'light')
+            lightMode()
+        }
+    }
 }
+
+persistAppTheme()
+
+
 
 /* Theme Data */
 
@@ -36,9 +51,11 @@ const mobileThemeBtnBox = document.querySelector(".mobile-navigation__settings--
 const mobileThemeBtn = document.querySelector(".mobile-navigation__settings--item__theme-btn div")
 
 
-let themeBtnCurrentState = false
+let themeBtnCurrentState = mobileThemeBtnBox.getAttribute('aria-mobile-theme-btn') == 'true' ? true : false
+
 mobileThemeBtnBox.addEventListener("click", ()=>{
-    if(themeBtnCurrentState){
+    if(localStorage.getItem('theme') === 'dark'){
+        localStorage.setItem('theme', 'light')
         lightMode()
         mobileThemeBtnBox.setAttribute('aria-mobile-theme-btn', 'false')
         themeBtnCurrentState = false;
@@ -46,6 +63,7 @@ mobileThemeBtnBox.addEventListener("click", ()=>{
         mobileThemeBtn.innerHTML = `<svg xmlns:xlink="http://www.w3.org/1999/xlink" xmlns="http://www.w3.org/2000/svg" fill="currentColor" class="css-41qi6t" width="24"  height="24" ><defs><symbol viewBox="0 0 24 24" id="mode-light"><path fill-rule="evenodd" clip-rule="evenodd" d="M10.5 2H13.5V5H10.5V2ZM16 12C16 14.2091 14.2091 16 12 16C9.79086 16 8 14.2091 8 12C8 9.79086 9.79086 8 12 8C14.2091 8 16 9.79086 16 12ZM5.98948 3.86891L3.86816 5.99023L5.98948 8.11155L8.1108 5.99023L5.98948 3.86891ZM2 13.5V10.5H5V13.5H2ZM3.86794 18.0095L5.98926 20.1309L8.11058 18.0095L5.98926 15.8882L3.86794 18.0095ZM13.5 19V22H10.5V19H13.5ZM18.01 15.8884L15.8887 18.0098L18.01 20.1311L20.1313 18.0098L18.01 15.8884ZM19 10.5H22V13.5H19V10.5ZM15.8894 5.99001L18.0107 8.11133L20.1321 5.99001L18.0107 3.86869L15.8894 5.99001Z" fill="currentColor"></path></symbol></defs><use xlink:href="#mode-light" fill="#707A8A"></use></svg>`
         
     }else{
+        localStorage.setItem('theme', 'dark')
         darkMode()
         mobileThemeBtnBox.setAttribute('aria-mobile-theme-btn', 'true')
         themeBtnCurrentState = true;
@@ -57,12 +75,12 @@ mobileThemeBtnBox.addEventListener("click", ()=>{
 
 /* Dark-Light Theme */
 
-
-
 desktopThemeBtn.addEventListener("click", ()=>{
     if(desktopThemeBtn.textContent === "dark_mode"){
+        localStorage.setItem('theme', 'dark')
         darkMode()
     }else{
+        localStorage.setItem('theme', 'light')
         lightMode()
     }
 })
